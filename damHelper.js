@@ -53,17 +53,29 @@ $("ot-resource").on( "click", function(event) {
         }
      };
 
-    console.log(data);
+     $.ajax({
+        headers : {
+            'Accept' : '*/*',
+            'Content-Type' : 'application/json'
+        },
+        url : 'https://dam.kraftheinzcompany.com/otmmapi/v5/assets/',
+        type : 'PATCH',
+        data : JSON.stringify(data),
+        success : function(response, textStatus, jqXhr) {
+            console.log("Success!!");
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+            // log the error to the console
+            console.log("The following error occured: " + textStatus, errorThrown);
+        },
+        complete : function() {
+            console.log("Code ran!!");
+        }
+    });
 
 });
 
 };
-
-
-//https://dam.kraftheinzcompany.com/otmmapi/v5/assets/
-/*
-method PATCH
-*/
 
 x();
 
