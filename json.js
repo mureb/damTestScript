@@ -154,4 +154,3 @@ x-requested-by: 1536986997
 x-requested-with: XMLHttpRequest
 
 
-{"edited_asset":{"data":{"metadata":[{"id":"KFT.FIELD.LACTALIS_STATUS","type":"com.artesia.metadata.MetadataField","value":{"value":{"type":"string","value":"Approved To Move"}}}]}}}
