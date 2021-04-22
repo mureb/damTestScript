@@ -14,7 +14,7 @@ var x = function(){
 $("ot-resource").removeAttr('ot-onspecialselect')
 $("ot-resource").removeAttr('onclick')
 
-$("<div><input class='.dam-helper' type='button' value='Approved To Move'></input><input class='.dam-helper' type='button' value='Candidate'></input><input class='.dam-helper' type='button' value='Do Not Move'></input></div>" ).insertAfter($("ot-rendition"));
+$("<div style='position: absolute'><input class='.dam-helper' type='button' value='Approved To Move'></input><input class='.dam-helper' type='button' value='Candidate'></input><input class='.dam-helper' type='button' value='Do Not Move'></input></div>" ).insertAfter($(".masonry-cell-inner"));
 
 setTimeout(function(){
     $(".dam-helper").on( "click", function(event) {
