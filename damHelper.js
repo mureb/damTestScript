@@ -14,14 +14,15 @@ var x = function(){
 $("ot-resource").removeAttr('ot-onspecialselect')
 $("ot-resource").removeAttr('onclick')
 
-$( "<input class='.dam-helper' type='button' value='Do Not Move'></input>" ).insertAfter("ot-resource");
-$( "<input class='.dam-helper' type='button' value='Candidate'></input>" ).insertAfter("ot-resource");
-$( "<input class='.dam-helper' type='button' value='Approved To Move'></input>" ).insertAfter("ot-resource");
+$("<div><input class='.dam-helper' type='button' value='Approved To Move'></input><input class='.dam-helper' type='button' value='Candidate'></input><input class='.dam-helper' type='button' value='Do Not Move'></input></div>" ).insertAfter(".masonry-cell-inner");
+
+setTimeout(function(){
+    $(".dam-helper").on( "click", function(event) {
+        console.log($(this).attr('value'));
+    });
+},2000);
 
 
-$(".dam-helper").on( "click", function(event) {
-    console.log($(this).attr('value'));
-});
 
 /*
 $("ot-resource").on( "click", function(event) {
