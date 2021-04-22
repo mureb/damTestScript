@@ -37,13 +37,19 @@ $("ot-resource").on( "click", function(event) {
 
     var data = {'assetID':assetID, 'modifiedData':modifiedData}
    
+    AssetDetailManager.lock (data, function(response, status, success){
+        if (success){
 
-    AssetDetailManager.update (data, function(response, status, success){
+            AssetDetailManager.update (data, function(response, status, success){
 
-        console.log('it works');
-        console.lof(response);
+                console.log('it works');
+                console.log(response);
+                    
+            });
             
-    });
+            AssetDetailManager.unlock(data)
+        }
+    });    
 });
 
 };
