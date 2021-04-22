@@ -56,11 +56,11 @@ $("ot-resource").on( "click", function(event) {
      $.ajax({
         headers : {
             'Accept' : '*/*',
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json; charset=UTF-8'
         },
         url : 'https://dam.kraftheinzcompany.com/otmmapi/v5/assets/',
         type : 'PATCH',
-        data : JSON.stringify(data),
+        data : data,
         success : function(response, textStatus, jqXhr) {
             console.log("Success!!");
         },
