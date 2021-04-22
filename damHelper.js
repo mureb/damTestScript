@@ -11,8 +11,9 @@ var x = function(){
     document.head.appendChild(JqueryScript);
 
 
-$("ot-resource").removeAttr('ot-onspecialselect')
-$("ot-resource").removeAttr('onclick')
+$("ot-resource").removeAttr('ot-onspecialselect');
+$("ot-resource").removeAttr('onclick');
+$('ot-point').remove();
 
 $("<div style='position: absolute'><input class='.dam-helper' type='button' value='Approved To Move'></input><input class='.dam-helper' type='button' value='Candidate'></input><input class='.dam-helper' type='button' value='Do Not Move'></input></div><br><br><br>").insertAfter($("ot-rendition"));
 
