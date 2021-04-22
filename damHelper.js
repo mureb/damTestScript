@@ -22,9 +22,6 @@ $("<div style='position: absolute'><input class='.dam-helper' type='button' valu
     });
 
 
-
-
-/*
 $("ot-resource").on( "click", function(event) {
    
    var assetID = $(this).attr('resourceid');
@@ -67,7 +64,7 @@ $("ot-resource").on( "click", function(event) {
            
         }
     });    
-}); */
+});
 
 };
 
