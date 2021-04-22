@@ -14,6 +14,16 @@ var x = function(){
 $("ot-resource").removeAttr('ot-onspecialselect')
 $("ot-resource").removeAttr('onclick')
 
+$( "<input class='.dam-helper' type='button' value='Do Not Move'>Test</input>" ).insertAfter(".masonry-cell-content-area");
+$( "<input class='.dam-helper' type='button' value='Candidate'>Test</input>" ).insertAfter(".masonry-cell-content-area");
+$( "<input class='.dam-helper' type='button' value='Approved To Move'>Test</input>" ).insertAfter(".masonry-cell-content-area");
+
+
+$(".dam-helper").on( "click", function(event) {
+    console.log($(this).attr('value'));
+});
+
+/*
 $("ot-resource").on( "click", function(event) {
    
    var assetID = $(this).attr('resourceid');
@@ -56,7 +66,7 @@ $("ot-resource").on( "click", function(event) {
            
         }
     });    
-});
+}); */
 
 };
 
