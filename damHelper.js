@@ -44,10 +44,11 @@ $("ot-resource").on( "click", function(event) {
 
                 console.log('it works');
                 console.log(response);
+                AssetDetailManager.unlock(data)
                     
             });
             
-            AssetDetailManager.unlock(data)
+           
         }
     });    
 });
