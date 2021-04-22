@@ -14,9 +14,9 @@ var x = function(){
 $("ot-resource").removeAttr('ot-onspecialselect')
 $("ot-resource").removeAttr('onclick')
 
-$( "<input class='.dam-helper' type='button' value='Do Not Move'>Test</input>" ).insertAfter(".masonry-cell-content-area");
-$( "<input class='.dam-helper' type='button' value='Candidate'>Test</input>" ).insertAfter(".masonry-cell-content-area");
-$( "<input class='.dam-helper' type='button' value='Approved To Move'>Test</input>" ).insertAfter(".masonry-cell-content-area");
+$( "<input class='.dam-helper' type='button' value='Do Not Move'></input>" ).insertAfter("ot-resource");
+$( "<input class='.dam-helper' type='button' value='Candidate'></input>" ).insertAfter("ot-resource");
+$( "<input class='.dam-helper' type='button' value='Approved To Move'></input>" ).insertAfter("ot-resource");
 
 
 $(".dam-helper").on( "click", function(event) {
