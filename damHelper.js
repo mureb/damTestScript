@@ -43,8 +43,13 @@ $("ot-resource").on( "click", function(event) {
             AssetDetailManager.update (data, function(response, status, success){
 
                 console.log('it works');
-                console.log(response);
-                AssetDetailManager.unlock(data)
+                console.log(status);
+                console.log(success);
+
+                setTimeout(function(){
+                    AssetDetailManager.unlock(data)
+                },10000)
+                
                     
             });
             
