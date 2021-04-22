@@ -56,7 +56,9 @@ $("ot-resource").on( "click", function(event) {
      $.ajax({
         headers : {
             'Accept' : '*/*',
-            'Content-Type' : 'application/json; charset=UTF-8'
+            'Content-Type' : 'application/json, charset=UTF-8',
+            'x-otmm-locale': 'en_US',
+            'x-requested-by': 1515807320
         },
         url : 'https://dam.kraftheinzcompany.com/otmmapi/v5/assets/',
         type : 'PATCH',
