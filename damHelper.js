@@ -15,7 +15,28 @@ $("ot-resource").removeAttr('ot-onspecialselect')
 $("ot-resource").removeAttr('onclick')
 
 $("ot-resource").on( "click", function(event) {
-    
+   
+   var assetId = $(this).attr('resourceid');
+
+   var editJson = {
+       "edited_asset":{
+           "data":{
+               "metadata":[{
+                   "id":"KFT.FIELD.LACTALIS_STATUS",
+                   "type":"com.artesia.metadata.MetadataField",
+                   "value":{
+                       "value":{
+                           "type":"string",
+                           "value":"Approved To Move"}
+                        }
+                    }
+                ]
+            }
+        }
+    }
+   
+   
+    /* 
    var data = {
         "bulk_edit_request_param":{
            "bulk_edit_request":{
@@ -51,18 +72,18 @@ $("ot-resource").on( "click", function(event) {
               }
            }
         }
-     };
+     };*/
 
      $.ajax({
         headers : {
             'Accept' : '*/*',
             'Content-Type' : 'application/json, charset=UTF-8',
             'x-otmm-locale': 'en_US',
-            'x-requested-by': 1515807320
+            'x-requested-by': 1536986997
         },
-        url : 'https://dam.kraftheinzcompany.com/otmmapi/v5/assets/',
+        url : '/otmmapi/v5/assets/' + assetId,
         type : 'PATCH',
-        data : data,
+        data : JSON.stringify(editJson),
         success : function(response, textStatus, jqXhr) {
             console.log("Success!!");
         },
