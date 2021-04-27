@@ -15,14 +15,30 @@ $("ot-resource").removeAttr('ot-onspecialselect');
 $("ot-resource").removeAttr('onclick');
 $('ot-point').remove();
 
-$("<div style='position: absolute'><input class='.dam-helper' type='button' value='Approved To Move'></input><input class='.dam-helper' type='button' value='Candidate'></input><input class='.dam-helper' type='button' value='Do Not Move'></input></div><br><br><br>").insertAfter($("ot-rendition"));
+$("<div id='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
 
 
-    $("input.dam-helper").on("click", function(event) {
-        console.log($(this).attr('value'));
-    });
+$("<input class='.dam-helper' type='button' value='Do Not Move'></input>",{
+    onclick: function(){
+        console.log($(this).attr('value'))
+    }
+}).insertAfter($("#damHelperButtons"))
+
+$("<input class='.dam-helper' type='button' value='Candidate'></input>",{
+    onclick: function(){
+        console.log($(this).attr('value'))
+    }
+}).insertAfter($("#damHelperButtons"))
 
 
+$("<input class='.dam-helper' type='button' value='Approved To Move'></input>",{
+    onclick: function(){
+        console.log($(this).attr('value'))
+    }
+}).insertAfter($("#damHelperButtons"))
+
+
+/*
 $("ot-resource").on( "click", function(event) {
    
    var assetID = $(this).attr('resourceid');
@@ -65,7 +81,7 @@ $("ot-resource").on( "click", function(event) {
            
         }
     });    
-});
+}); */
 
 };
 
