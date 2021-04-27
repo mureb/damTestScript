@@ -15,9 +15,9 @@ $("ot-resource").removeAttr('ot-onspecialselect');
 $("ot-resource").removeAttr('onclick');
 $('ot-point').remove();
 
-$("<div id='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
+$("<div class='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
 
-$("#damHelperButtons").prepend(
+$(".damHelperButtons").prepend(
     $("<input class='damhelper' type='button' value='Do Not Move'></input>",{
         onclick: function(){
             console.log('it works')
@@ -25,7 +25,7 @@ $("#damHelperButtons").prepend(
     })
 );
 
-$("#damHelperButtons").prepend(
+$(".damHelperButtons").prepend(
     $("<input class='damhelper' type='button' value='Candidate'></input>",{
         onclick: function(){
             console.log('it works')
@@ -33,7 +33,7 @@ $("#damHelperButtons").prepend(
     })
 );
 
-$("#damHelperButtons").prepend(
+$(".damHelperButtons").prepend(
     $("<input class='damhelper' type='button' value='Approved To Move'></input>",{
         onclick: function(){
             console.log('it works')
