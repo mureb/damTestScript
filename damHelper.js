@@ -17,12 +17,14 @@ $('ot-point').remove();
 
 $("<div id='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
 
+$("#damHelperButtons").append(
+    $("<input class='damhelper' type='button' value='Do Not Move'></input>",{
+        onclick: function(){
+            console.log($(this).attr('value'))
+        }
+    })
+);
 
-$("<input class='damhelper' type='button' value='Do Not Move'></input>",{
-    onclick: function(){
-        console.log($(this).attr('value'))
-    }
-}).insertAfter($("#damHelperButtons"))
 
 $("<input class='damhelper' type='button' value='Candidate'></input>",{
     onclick: function(){
