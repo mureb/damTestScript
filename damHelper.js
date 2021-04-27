@@ -18,20 +18,20 @@ $('ot-point').remove();
 $("<div id='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
 
 
-$("<input class='.dam-helper' type='button' value='Do Not Move'></input>",{
+$("<input class='damhelper' type='button' value='Do Not Move'></input>",{
     onclick: function(){
         console.log($(this).attr('value'))
     }
 }).insertAfter($("#damHelperButtons"))
 
-$("<input class='.dam-helper' type='button' value='Candidate'></input>",{
+$("<input class='damhelper' type='button' value='Candidate'></input>",{
     onclick: function(){
         console.log($(this).attr('value'))
     }
 }).insertAfter($("#damHelperButtons"))
 
 
-$("<input class='.dam-helper' type='button' value='Approved To Move'></input>",{
+$("<input class='damhelper' type='button' value='Approved To Move'></input>",{
     onclick: function(){
         console.log($(this).attr('value'))
     }
