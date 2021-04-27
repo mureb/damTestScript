@@ -17,27 +17,30 @@ $('ot-point').remove();
 
 $("<div id='damHelperButtons'> <br><br><br></div>").insertAfter($("ot-rendition"))
 
-$("#damHelperButtons").append(
+$("#damHelperButtons").prepend(
     $("<input class='damhelper' type='button' value='Do Not Move'></input>",{
         onclick: function(){
-            console.log($(this).attr('value'))
+            console.log('it works')
         }
     })
 );
 
+$("#damHelperButtons").prepend(
+    $("<input class='damhelper' type='button' value='Candidate'></input>",{
+        onclick: function(){
+            console.log('it works')
+        }
+    })
+);
 
-$("<input class='damhelper' type='button' value='Candidate'></input>",{
-    onclick: function(){
-        console.log($(this).attr('value'))
-    }
-}).insertAfter($("#damHelperButtons"))
+$("#damHelperButtons").prepend(
+    $("<input class='damhelper' type='button' value='Approved To Move'></input>",{
+        onclick: function(){
+            console.log('it works')
+        }
+    })
+);
 
-
-$("<input class='damhelper' type='button' value='Approved To Move'></input>",{
-    onclick: function(){
-        console.log($(this).attr('value'))
-    }
-}).insertAfter($("#damHelperButtons"))
 
 
 /*
@@ -84,6 +87,8 @@ $("ot-resource").on( "click", function(event) {
         }
     });    
 }); */
+
+console.log('version 1')
 
 };
 
