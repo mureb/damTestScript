@@ -71,7 +71,7 @@ $('.damhelper').on('click', function(){
 
 });
 
-console.log('version 4')
+console.log('version 4');
 
 };
 
