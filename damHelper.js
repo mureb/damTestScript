@@ -26,10 +26,12 @@ $(".damHelperButtons").prepend($("<input class='damhelper' type='button' value='
 $(".damHelperButtons").prepend($("<input class='damhelper' type='button' value='Approved To Move'></input>"));
 
 $('.damhelper').on('click', function(){
-    var assetID = $(this).parent('ot-resource').attr('resourceid');
+   
+    var assetID = $(this).parents('ot-resource').attr('resourceid');
+   
     var lactalisStatus = $(this).attr('value');
     console.log(assetID);
-    console.log(assetID);
+    console.log(lactalisStatus);
 });
 
 
