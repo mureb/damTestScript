@@ -2,6 +2,10 @@
 
 //fetch('https://raw.githubusercontent.com/mureb/damTestScript/master/damHelper.js', {mode:'cors'}).then((response) => response.text()).then((text)=>eval(text))
 
+var damHelperComs = function(assetID, lactalisStatus){
+
+}
+
 
 var x = function(){
 
@@ -22,8 +26,11 @@ $(".damHelperButtons").prepend($("<input class='damhelper' type='button' value='
 $(".damHelperButtons").prepend($("<input class='damhelper' type='button' value='Approved To Move'></input>"));
 
 $('.damhelper').on('click', function(){
-    console.log($(this).attr('value'));
-})
+    var assetID = $(this).parent('ot-resource').attr('resourceid');
+    var lactalisStatus = $(this).attr('value');
+    console.log(assetID);
+    console.log(assetID);
+});
 
 
 /*
