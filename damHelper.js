@@ -3,7 +3,43 @@
 //fetch('https://raw.githubusercontent.com/mureb/damTestScript/master/damHelper.js', {mode:'cors'}).then((response) => response.text()).then((text)=>eval(text))
 
 var damHelperComs = function(assetID, lactalisStatus){
-
+    
+    var modifiedData = {
+        "edited_asset":{
+            "data":{
+                "metadata":[{
+                    "id":"KFT.FIELD.LACTALIS_STATUS",
+                    "type":"com.artesia.metadata.MetadataField",
+                    "value":{
+                        "value":{
+                            "type":"string",
+                            "value":lactalisStatus}
+                         }
+                     }
+                 ]
+             }
+         }
+     }
+ 
+     var data = {'assetID':assetID, 'modifiedData':modifiedData}
+    
+     AssetDetailManager.lock (data, function(response, status, success){
+         if (success){
+ 
+             AssetDetailManager.update (data, function(response, status, success){
+ 
+                 console.log(success);
+ 
+                 setTimeout(function(){
+                     AssetDetailManager.unlock(data)
+                 },10000)
+                 
+                     
+             });
+             
+            
+         }
+     });  
 }
 
 
@@ -34,53 +70,7 @@ $('.damhelper').on('click', function(){
     console.log(lactalisStatus);
 });
 
-
-/*
-$("ot-resource").on( "click", function(event) {
-   
-   var assetID = $(this).attr('resourceid');
-
-   var modifiedData = {
-       "edited_asset":{
-           "data":{
-               "metadata":[{
-                   "id":"KFT.FIELD.LACTALIS_STATUS",
-                   "type":"com.artesia.metadata.MetadataField",
-                   "value":{
-                       "value":{
-                           "type":"string",
-                           "value":"Approved To Move"}
-                        }
-                    }
-                ]
-            }
-        }
-    }
-
-    var data = {'assetID':assetID, 'modifiedData':modifiedData}
-   
-    AssetDetailManager.lock (data, function(response, status, success){
-        if (success){
-
-            AssetDetailManager.update (data, function(response, status, success){
-
-                console.log('it works');
-                console.log(status);
-                console.log(success);
-
-                setTimeout(function(){
-                    AssetDetailManager.unlock(data)
-                },10000)
-                
-                    
-            });
-            
-           
-        }
-    });    
-}); */
-
-console.log('version 2')
+console.log('version 3')
 
 };
 
