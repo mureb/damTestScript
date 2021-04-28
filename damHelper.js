@@ -66,11 +66,12 @@ $('.damhelper').on('click', function(){
     var assetID = $(this).parents('ot-resource').attr('resourceid');
    
     var lactalisStatus = $(this).attr('value');
-    console.log(assetID);
-    console.log(lactalisStatus);
+    
+    damHelperComs(assetID, lactalisStatus);
+
 });
 
-console.log('version 3')
+console.log('version 4')
 
 };
 
